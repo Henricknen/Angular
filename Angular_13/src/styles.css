@@ -1,3 +1,4 @@
+                            /* style Global */
 * {
   margin: 0;
   padding: 0;           /* todos os elementos ira receber esta formatação */
@@ -6,4 +7,14 @@
 
 a {
   color: blue;
+}
+
+body {
+  padding-bottom: 500px;
+}
+
+.class {
+  border-bottom: 1px solid red;
+  padding: 2em;
+  margin-bottom: 1em;
 }

@@ -1,0 +1,9 @@
+<div class="class">
+  <div *ngIf="canShow">Este texto será visualizado pois a condiçional 'canShow' está 'true'</div>
+  <h2 *ngIf="name == 'Luis henrique s f'; else nameNotFound">Me chamo Luis Henrique Silva Ferreira</h2>   <!-- sera apresentado na tela se o nome da condiçional for 'luis henrique s f' -->
+  <ng-template #nameNotFound>
+    <div>
+      <h2>O nome não foi encontrado</h2>
+    </div>
+  </ng-template>
+</div>
