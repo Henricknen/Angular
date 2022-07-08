@@ -1,4 +1,5 @@
 {
+    "animals": [
     { "name": "Fred", "type": "Cachorro", "age": 7},
     { "name": "kiara", "type": "Gato", "age": 3},       
     { "name": "Luke", "type": "Cachorro", "age": 10},
