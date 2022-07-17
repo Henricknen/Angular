@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./novo-momento.component.css']
 })
 export class NovoMomentoComponent implements OnInit {
+  btnText = 'Compartilhar!';
 
   constructor() { }
 
