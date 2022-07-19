@@ -1,10 +1,10 @@
 <form (ngSubmit)="submit()" [formGroup]="momentoform" #formDir="ngForm">
   <div class="form-group">
     <label for="title">Titulo:</label>
-    <input 
-    type="text" 
-    placeholder="Coloque um titulo" 
-    formControlName="title" 
+    <input
+    type="text"
+    placeholder="Coloque um titulo"
+    formControlName="title"
     required
     />
     <div *ngIf="title.invalid && formDir.submitted" class="validation-error">
@@ -20,7 +20,7 @@
   </div>
   <div class="form-group">
     <label for="image">Foto marcante:</label>
-    <input type="file">
+    <input type="file" (change)="onFileSelected($event)" />
   </div>
   <input type="submit" value="{{ btnText }}">
 </form>
