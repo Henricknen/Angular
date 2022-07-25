@@ -18,7 +18,8 @@ export class HomeComponent implements OnInit {
   momentos: Momento[] = []    /* vi ser a exibição depois da busca */
   baseApiUrl = environment.baseApiUrl   /* busca dados da 'api' */
 
-  // todo search
+  faSearch = faSearch   /* definindo icone 'lupa' */
+  searchTerm: string = "";    /* o que o usuario vai buscar */
 
   constructor(private momentoService: MomentoService) { }
 
@@ -31,12 +32,22 @@ export class HomeComponent implements OnInit {
         item.created_at = new Date(item.created_at!).toLocaleDateString(
           'pt-BR'
           );
-      })
+      });
 
       this.allMomentos = data;
       this.momentos = data;
 
-    })
+    });
+  }
+
+  search(e:Event): void {
+
+    const target = e.target as HTMLInputElement;
+    const value = target.value;
+
+    this.momentos = this.allMomentos.filter((momento) => {
+      return momento.title.toLowerCase().includes(value);
+    });
   }
 
 }

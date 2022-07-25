@@ -45,3 +45,26 @@ a {
 a:hover {
   background-color: #efefef;
 }
+
+.search-container {
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.ssearch-container form {
+  width: 30%;
+  position: relative;
+}
+
+.search-container fa-icon {
+  position: absolute;
+}
+
+.search-container input {
+  padding: 0.5em;
+  width: 100%;
+  text-align: center;
+}
+
+
+
