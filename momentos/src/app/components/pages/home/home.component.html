@@ -1,8 +1,20 @@
 <div class="home-container">
   <h1>Compartilhamentos...</h1>
   <!-- form de busca -->
-  <div *ngFor = "let momento of momentos">   <!-- momentos sendo exibidos -->
-    <h2>{{momento.title}}</h2>
-
+  <div *ngIf="momentos.length > 0; else noMomentos">
+    <div class="momentos-container">
+      <div class="momentos" *ngFor = "let momento of momentos">   <!-- momentos sendo exibidos -->
+        <img
+          src="{{ baseApiUrl }}uploads/{{ momento.image }}"
+          alt="{{ momento.title }}"
+        />
+        <h3>{{momento.title}}</h3>
+        <p class="date">Em: {{ momento.created_at }}</p>
+        <p><a routerLink="momentos//{{ momento.id }}">Detalhes...</a></p>
+      </div>
+    </div>
   </div>
+  <ng-template #noMomentos>
+    <h1> Não tem cadastro de momentos..</h1>
+  </ng-template>
 </div>
